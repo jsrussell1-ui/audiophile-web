@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Signal Path | Tidal Player</title>
+    <title>The Signal Path | Tidal Curation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0b0f1a; color: #f8fafc; }
@@ -11,42 +11,58 @@
             background: rgba(30, 41, 59, 0.5); 
             backdrop-filter: blur(12px); 
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
-        iframe { border-radius: 12px; border: none; }
+        .gear-card { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.05); }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center p-6">
+<body class="min-h-screen flex flex-col items-center py-12 px-6">
 
-    <div class="max-w-xl w-full text-center mb-10">
-        <h1 class="text-xs tracking-[0.3em] uppercase text-orange-500 font-bold mb-4">Now Playing</h1>
-        <h2 class="text-3xl font-black tracking-tight mb-2">The Signal Path</h2>
-        <p class="text-slate-400 text-sm">Curated hi-fidelity selection from the collection.</p>
+    <div class="max-w-xl w-full text-center mb-12">
+        <h1 class="text-xs tracking-[0.4em] uppercase text-orange-500 font-bold mb-3">The Signal Path</h1>
+        <h2 class="text-4xl font-black tracking-tighter">Audiophile Archive</h2>
     </div>
 
-    <div class="player-container p-4 rounded-3xl w-full max-w-[540px]">
+    <div class="player-container p-4 rounded-3xl w-full max-w-[540px] shadow-2xl mb-8">
         <iframe 
             src="https://embed.tidal.com/playlists/2fdd5041-f9af-4c38-8f7c-4b12508e7256" 
             width="100%" 
             height="450" 
-            allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share" 
-            sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox" 
+            allow="encrypted-media; fullscreen; clipboard-write; web-share" 
+            style="border-radius: 16px;"
             title="TIDAL Embed Player">
         </iframe>
     </div>
 
-    <div class="mt-12 flex gap-6">
-        <a href="https://tidal.com/artist/67280098" target="_blank" class="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-orange-500 transition">
-            Artist Profile
-        </a>
-        <span class="text-slate-700">|</span>
-        <button onclick="window.location.reload()" class="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white transition">
-            Refresh Stream
-        </button>
+    <div class="w-full max-w-[540px] mb-12">
+        <div class="p-8 rounded-2xl bg-white text-black text-center shadow-xl transform hover:-translate-y-1 transition duration-300">
+            <h3 class="text-xs font-black uppercase tracking-widest mb-4 opacity-60">Listen on Your Platform</h3>
+            <a href="https://sdz.sh/onZEX9/tidal" target="_blank" class="block w-full bg-black text-white py-4 rounded-xl font-bold hover:bg-orange-600 transition">
+                Convert to Spotify / Apple / Qobuz
+            </a>
+            <p class="mt-4 text-[10px] uppercase font-bold tracking-tighter opacity-40">Syncing via Soundiiz Smartlink</p>
+        </div>
     </div>
 
-    <footer class="mt-auto pt-10 opacity-30 text-[10px] uppercase tracking-widest">
-        Signal Path Archive &copy; 2026
+    <div class="w-full max-w-[540px] space-y-4">
+        <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 text-center mb-6">Optimized For</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="gear-card p-5 rounded-2xl">
+                <span class="text-orange-500 text-[10px] font-bold uppercase">Source</span>
+                <p class="font-bold text-sm">Bottlehead Crack 1.1</p>
+                <p class="text-[11px] text-slate-500">OTL Tube Amp w/ Speedball</p>
+            </div>
+            <div class="gear-card p-5 rounded-2xl">
+                <span class="text-orange-500 text-[10px] font-bold uppercase">Transducer</span>
+                <p class="font-bold text-sm">Sennheiser HD 660S2</p>
+                <p class="text-[11px] text-slate-500">Open-Back Reference</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-20 opacity-20 text-[10px] uppercase tracking-widest text-center">
+        Signal Path Curation &copy; 2026<br>
+        Curated in Novi, MI
     </footer>
 
 </body>
