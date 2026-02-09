@@ -3,80 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Signal Path | Universal Archive</title>
+    <title>The Signal Path | Universal Sync</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #05070a; color: #a1a1aa; }
-        .hero-gradient { background: radial-gradient(circle at center, #111827 0%, #05070a 100%); }
-        .glass-panel { 
-            background: rgba(255, 255, 255, 0.02); 
-            backdrop-filter: blur(25px); 
-            border: 1px solid rgba(255, 255, 255, 0.07); 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        body { background-color: #020617; color: #f8fafc; }
+        .glass-card { 
+            background: rgba(15, 23, 42, 0.6); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .action-button {
-            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .action-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(234, 88, 12, 0.3);
-        }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #020617; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
     </style>
 </head>
-<body class="min-h-screen hero-gradient flex flex-col items-center py-12 px-6">
+<body class="min-h-screen flex flex-col items-center py-10 px-4">
 
-    <header class="text-center mb-12">
-        <h1 class="text-[10px] tracking-[0.6em] uppercase text-orange-500 font-black mb-2">The Signal Path</h1>
-        <h2 class="text-4xl font-light text-white tracking-tighter">Universal Curation</h2>
+    <header class="w-full max-w-4xl text-center mb-10">
+        <h1 class="text-[10px] tracking-[0.6em] uppercase text-orange-500 font-bold mb-2">The Signal Path</h1>
+        <h2 class="text-3xl font-light tracking-tighter text-white">Universal Format Station</h2>
     </header>
 
-    <main class="w-full max-w-2xl space-y-6">
+    <main class="w-full max-w-4xl space-y-8">
         
-        <div class="glass-panel p-2 rounded-[2.5rem]">
+        <section class="glass-card rounded-[2rem] overflow-hidden p-2">
+            <div class="p-4">
+                <span class="text-[10px] font-bold uppercase text-slate-500 tracking-widest">Step 01: Preview on Tidal</span>
+            </div>
             <iframe 
                 src="https://embed.tidal.com/playlists/2fdd5041-f9af-4c38-8f7c-4b12508e7256" 
                 width="100%" 
-                height="450" 
+                height="300" 
                 allow="encrypted-media; fullscreen; clipboard-write; web-share" 
-                style="border-radius: 2rem;"
-                title="TIDAL Stream">
+                class="rounded-2xl"
+                title="Tidal Preview">
             </iframe>
-        </div>
+        </section>
 
-        <div class="glass-panel p-10 rounded-[2.5rem] text-center">
-            <h3 class="text-white text-xl font-bold mb-2">Sync This Collection</h3>
-            <p class="text-sm text-slate-400 mb-8">Choose your preferred streaming platform to save this playlist to your own library.</p>
+        <section class="glass-card rounded-[2rem] overflow-hidden">
+            <div class="p-6 border-b border-white/5">
+                <span class="text-[10px] font-bold uppercase text-orange-500 tracking-widest">Step 02: Export to Your Library</span>
+                <p class="text-sm text-slate-400 mt-1">Select Spotify, YouTube Music, or Apple Music below.</p>
+            </div>
             
-            <a href="https://www.tunemymusic.com/share/WefkiVmQXk" 
-               target="_blank" 
-               class="action-button inline-block w-full sm:w-auto px-12 py-5 rounded-2xl text-white font-black uppercase tracking-widest text-sm">
-                Open Conversion Tool
-            </a>
+            <div class="bg-white">
+                <iframe 
+                    src="https://www.tunemymusic.com/share/WefkiVmQXk" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0"
+                    class="custom-scrollbar"
+                    title="TuneMyMusic Engine">
+                </iframe>
+            </div>
+        </section>
 
-            <div class="mt-8 flex justify-center items-center gap-6 opacity-30 grayscale">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" class="h-5" alt="Spotify">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Youtube_Music_icon.svg" class="h-5" alt="YouTube Music">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="h-5" alt="Apple Music" style="filter: invert(1);">
+        <footer class="grid grid-cols-2 gap-4 text-center pb-10">
+            <div class="glass-card p-6 rounded-3xl">
+                <p class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">Analog Reference</p>
+                <p class="text-xs font-bold">Bottlehead Crack 1.1 + Speedball</p>
             </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4">
-            <div class="glass-panel py-6 px-4 rounded-3xl text-center">
-                <span class="text-[9px] uppercase tracking-widest text-orange-500 block mb-1">Analog Path</span>
-                <span class="text-white text-xs font-bold">Bottlehead Crack 1.1</span>
+            <div class="glass-card p-6 rounded-3xl">
+                <p class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">Monitoring</p>
+                <p class="text-xs font-bold">Sennheiser HD 660S2</p>
             </div>
-            <div class="glass-panel py-6 px-4 rounded-3xl text-center">
-                <span class="text-[9px] uppercase tracking-widest text-orange-500 block mb-1">Reference</span>
-                <span class="text-white text-xs font-bold">Sennheiser HD 660S2</span>
-            </div>
-        </div>
+        </footer>
 
     </main>
 
-    <footer class="mt-auto pt-16 text-center">
-        <p class="text-[9px] uppercase tracking-[0.5em] text-slate-600">Jon Russell • Novi, Michigan</p>
-    </footer>
+    <p class="text-[9px] uppercase tracking-[0.5em] text-slate-700">Jon Russell • Novi, Michigan</p>
 
 </body>
 </html>
